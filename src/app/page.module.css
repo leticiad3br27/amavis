@@ -1,106 +1,823 @@
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* Header Styles */
 .header {
   background-color: #003366;
   color: white;
-  text-align: center;
   padding: 20px 0;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 20px;
 }
 
+.logoContainer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logoContainer h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #fff;
+}
+
+.logoContainer p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #e6f2ff;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.nav button {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav button.active {
+  background-color: #00509e;
+  font-weight: bold;
+}
+
+/* Hero Section */
 .hero {
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
   background-color: #00509e;
   color: white;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero:hover {
-  transform: scale(1.02);
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,80,158,0.8) 0%, rgba(0,51,102,0.9) 100%);
 }
 
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.socialButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socialButton {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.socialButton:hover {
+  transform: scale(1.1);
+}
+
+.socialButton img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Stats Section */
 .stats {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 40px 0;
+  gap: 20px;
 }
 
 .card {
   background: white;
-  padding: 20px;
+  padding: 30px 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   flex: 1;
-  margin: 10px;
-  transition: transform 0.3s ease-in-out;
+  min-width: 200px;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.services, .howToHelp, .diagnosis, .testimonials {
-  background: white;
-  padding: 40px;
+.card h3 {
+  color: #003366;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* FACILITA AMAVI Section */
+.facilita {
+  background-color: #f5f9ff;
+  padding: 50px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
 }
 
-.testimonial {
-  background: #e6f2ff;
-  padding: 20px;
-  border-left: 5px solid #00509e;
-  margin: 10px 0;
-  font-style: italic;
+.facilita h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 30px;
+  font-size: 2rem;
 }
 
+.facilitaContent {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.facilitaText {
+  flex: 1;
+}
+
+.facilitaText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.facilitaText h3 {
+  color: #00509e;
+  margin: 25px 0 15px;
+}
+
+.facilitaText ul {
+  padding-left: 20px;
+}
+
+.facilitaText li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.primaryButton, .secondaryButton {
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.primaryButton {
+  background-color: #00509e;
+  color: white;
+}
+
+.primaryButton:hover {
+  background-color: #003366;
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background-color: white;
+  color: #00509e;
+  border: 2px solid #00509e;
+}
+
+.secondaryButton:hover {
+  background-color: #e6f2ff;
+  transform: translateY(-2px);
+}
+
+.facilitaImage {
+  flex: 1;
+  text-align: center;
+}
+
+.facilitaImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Services Section */
+.services {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.services h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.services p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.serviceCard {
+  background-color: #f5f9ff;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 5px solid #00509e;
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.serviceCard h3 {
+  color: #003366;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.serviceCard p {
+  text-align: left;
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.howToHelp {
+  margin-top: 50px;
+}
+
+.howToHelp h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.helpGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.helpCard {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #00509e;
+  transition: all 0.3s ease;
+}
+
+.helpCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.helpCard h3 {
+  color: #00509e;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.helpCard p {
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Team Section */
+.team {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.team h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.teamSection {
+  margin-bottom: 50px;
+}
+
+.teamSection h3 {
+  color: #00509e;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.teamSection p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.memberCard {
+  background-color: #f5f9ff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.memberCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.memberCard img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.memberCard h4 {
+  color: #003366;
+  margin: 20px 0 5px;
+  font-size: 1.2rem;
+}
+
+.memberCard p {
+  color: #555;
+  margin: 0 0 20px;
+  font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact {
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contactContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contactInfo {
+  flex: 1;
+  min-width: 300px;
+  padding: 50px;
+  background-color: #f5f9ff;
+}
+
+.contactInfo h2 {
+  color: #003366;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.infoCard {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.infoCard h3 {
+  color: #00509e;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.infoCard p {
+  color: #555;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #003366;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: #00509e;
+  transform: translateX(5px);
+}
+
+.socialLinks img {
+  width: 24px;
+  height: 24px;
+}
+
+.contactForm {
+  flex: 1;
+  min-width: 300px;
+  padding: 50px;
+}
+
+.contactForm h3 {
+  color: #003366;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #00509e;
+  box-shadow: 0 0 0 2px rgba(0, 80, 158, 0.2);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  background-color: #00509e;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #003366;
+  transform: translateY(-2px);
+}
+
+.mapContainer {
+  width: 100%;
+  height: 450px;
+}
+
+/* Footer Styles */
 .footer {
   background-color: #003366;
   color: white;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
-  border-radius: 10px;
-  font-size: 14px;
+  padding: 50px 0 20px;
+  border-radius: 0 0 10px 10px;
 }
 
-/* Botões estilizados */
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 10px 0;
-  background-color: #00509e;
+.footerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+.footerSection {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footerSection h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footerSection p {
+  color: #e6f2ff;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerSection li {
+  margin-bottom: 10px;
+}
+
+.footerSection button {
+  background: none;
+  border: none;
+  color: #e6f2ff;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footerSection button:hover {
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease-in-out;
+  text-decoration: underline;
 }
 
-.button:hover {
-  background-color: #003366;
+.socialIcons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-/* Layout Responsivo */
+.socialIcons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.socialIcons a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.socialIcons img {
+  width: 20px;
+  height: 20px;
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerBottom p {
+  color: #e6f2ff;
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .stats {
+  .header {
+    padding: 15px 0;
+  }
+  
+  .hero {
+    padding: 40px 20px;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .facilitaContent {
+    flex-direction: column;
+  }
+  
+  .contactContainer {
+    flex-direction: column;
+  }
+  
+  .contactInfo, .contactForm {
+    padding: 30px;
+  }
+  
+  .serviceGrid, .helpGrid, .teamGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footerContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
     flex-direction: column;
     align-items: center;
   }
   
-  .card {
-    width: 80%;
+  .nav button {
+    width: 100%;
   }
+  
+  .ctaButtons {
+    flex-direction: column;
+  }
+  
+  .primaryButton, .secondaryButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Adicione estas regras ao seu CSS existente */
+
+/* Estilos para ícones */
+.socialButton svg,
+.socialLinks svg,
+.socialIcons svg {
+  color: #00509e;
+}
+
+.socialButton {
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.socialButton:hover {
+  transform: scale(1.1);
+  background-color: #e6f2ff;
+}
+
+.socialButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #003366;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: #00509e;
+  transform: translateX(5px);
+}
+
+.socialLinks svg {
+  width: 20px;
+  height: 20px;
+}
+
+.socialIcons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.socialIcons a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.socialIcons svg {
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+
+/* Ícones de contato */
+.infoCard h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.infoCard svg {
+  width: 20px;
+  height: 20px;
+  color: #00509e;
+}
+
+.memberImage {
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.facilitaImage img {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
 }
