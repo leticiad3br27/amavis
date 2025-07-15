@@ -95,7 +95,12 @@ export default function Home() {
 
               <div className={styles.ctaButtons}>
                 <button className={styles.primaryButton}>Cadastre-se Agora</button>
-                <button className={styles.secondaryButton}>Acesse sua Conta</button>
+                <a 
+                  href="https://amavi.dev.vilhena.ifro.edu.br/login" 
+                  className={styles.secondaryButton}
+                >
+                  Acesse sua Conta
+                </a>
               </div>
             </div>
             <div className={styles.facilitaImage}>
@@ -278,8 +283,7 @@ export default function Home() {
               
               <div className={styles.infoCard}>
                 <h3><FaMapMarkerAlt /> Endereço</h3>
-                <p>Rua Sergio Almir Carniel, nº 635, bairro BNH
-                </p>
+                <p>Rua Sergio Almir Carniel, nº 635, bairro BNH</p>
                 <p>Vilhena - RO, 76980-000</p>
               </div>
               
